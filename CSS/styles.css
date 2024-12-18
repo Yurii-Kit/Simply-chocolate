@@ -1,6 +1,9 @@
 .hide {
   display: none;
 }
+.hide {
+  display: none;
+}
 
 /* #region Base */
 html {
@@ -8,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #fafafa;
   color: #111111;
 }
@@ -308,7 +311,7 @@ button {
   color: #fd9222;
 }
 .nav-link.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 20px;
   left: 0;
@@ -348,7 +351,7 @@ button {
       rgba(17, 17, 17, 0.4),
       rgba(17, 17, 17, 0.4)
     ),
-    url('../images/hero/hero-bg_mob@1x.jpg');
+    url("../images/hero/hero-bg_mob@1x.jpg");
 }
 @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero-container {
@@ -356,7 +359,7 @@ button {
         rgba(17, 17, 17, 0.4),
         rgba(17, 17, 17, 0.4)
       ),
-      url('../images/hero/hero-bg_mob@2x.jpg');
+      url("../images/hero/hero-bg_mob@2x.jpg");
   }
 }
 @media only screen and (min-width: 768px) {
@@ -366,7 +369,7 @@ button {
         rgba(17, 17, 17, 0.4),
         rgba(17, 17, 17, 0.4)
       ),
-      url('../images/hero/hero-bg_tab@1x.jpg');
+      url("../images/hero/hero-bg_tab@1x.jpg");
   }
 }
 @media only screen and (min-width: 768px) and (min-resolution: 192dpi),
@@ -376,7 +379,7 @@ button {
         rgba(17, 17, 17, 0.4),
         rgba(17, 17, 17, 0.4)
       ),
-      url('../images/hero/hero-bg_tab@2x.jpg');
+      url("../images/hero/hero-bg_tab@2x.jpg");
   }
 }
 @media only screen and (min-width: 1168px) {
@@ -386,7 +389,7 @@ button {
         rgba(17, 17, 17, 0.4),
         rgba(17, 17, 17, 0.4)
       ),
-      url('../images/hero/hero-bg_desk@1x.jpg');
+      url("../images/hero/hero-bg_desk@1x.jpg");
   }
 }
 @media only screen and (min-width: 1168px) and (min-resolution: 192dpi),
@@ -396,7 +399,7 @@ button {
         rgba(17, 17, 17, 0.4),
         rgba(17, 17, 17, 0.4)
       ),
-      url('../images/hero/hero-bg_desk@2x.jpg');
+      url("../images/hero/hero-bg_desk@2x.jpg");
   }
 }
 .hero-title {
@@ -456,7 +459,7 @@ button {
 }
 @media only screen and (min-width: 1168px) {
   .benefits-item:not(:last-child)::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     right: -45px;
@@ -584,7 +587,7 @@ button {
   letter-spacing: -0.02em;
 }
 .made-item::before {
-  content: '';
+  content: "";
   flex-shrink: 0;
   display: block;
   width: 8px;
@@ -1054,7 +1057,7 @@ button {
   transition: 150ms ease-in;
   transition-property: background-color, border-color;
 }
-input[type='checkbox']:checked
+input[type="checkbox"]:checked
   + .modal-form-agremeent-text
   > .modal-form-checkbox {
   background-color: #fd9222;
@@ -1065,13 +1068,13 @@ input[type='checkbox']:checked
   transition: 150ms ease-in;
   transition-property: opacity;
 }
-input[type='checkbox']:checked
+input[type="checkbox"]:checked
   + .modal-form-agremeent-text
   > .modal-form-checkbox
   > .modal-form-checkbox-icon {
   opacity: 1;
 }
-input[type='checkbox']:focus-visible
+input[type="checkbox"]:focus-visible
   + .modal-form-agremeent-text
   > .modal-form-checkbox {
   outline: 2px solid #fd9222;
