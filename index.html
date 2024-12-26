@@ -31,7 +31,7 @@
   </head>
   <body>
     <!-- Header section -->
-    <header class="header" id="home">
+    <header class="header hide ready" id="home">
       <div class="header-container container">
         <nav class="nav">
           <a class="logo" href="./index.html">
@@ -116,7 +116,7 @@
     </header>
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <section class="hero hide ready">
         <div class="hero-container container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our&nbsp;finest ingredients for a
@@ -135,7 +135,7 @@
         </div>
       </section>
       <!-- Benefits section -->
-      <section class="section benefits" id="benefits">
+      <section class="section benefits hide ready" id="benefits">
         <div class="container">
           <h2 class="visually-hidden">Simply Chocolate benefits</h2>
           <ul class="benefits-list">
@@ -186,7 +186,7 @@
         </div>
       </section>
       <!-- Ingridients section -->
-      <section class="section ingridient">
+      <section class="section ingridient ready">
         <div class="container">
           <h2 class="ingridient-title section-title">
             It all adds up to one exceptional
@@ -196,7 +196,11 @@
             <li class="ingridient-item">
               <img
                 class="ingridient-img"
-                src="./images/ingridients/img-1.png"
+                srcset="
+                  ./images/ingridients/img-1_mob@1x.png 1x,
+                  ./images/ingridients/img-1_mob@2x.png 2x
+                "
+                src="./images/ingridients/img-1_mob@1x.png"
                 alt="Milk chocolate"
                 width="214"
                 height="160"
@@ -206,7 +210,11 @@
             <li class="ingridient-item">
               <img
                 class="ingridient-img"
-                src="./images/ingridients/img-2.png"
+                srcset="
+                  ./images/ingridients/img-2_mob@1x.png 1x,
+                  ./images/ingridients/img-2_mob@2x.png 2x
+                "
+                src="./images/ingridients/img-2_mob@1x.png"
                 alt="Milk"
                 width="214"
                 height="160"
@@ -216,7 +224,11 @@
             <li class="ingridient-item">
               <img
                 class="ingridient-img"
-                src="./images/ingridients/img-3.png"
+                srcset="
+                  ./images/ingridients/img-3_mob@1x.png 1x,
+                  ./images/ingridients/img-3_mob@2x.png 2x
+                "
+                src="./images/ingridients/img-3_mob@1x.png"
                 alt="Nuts"
                 width="214"
                 height="160"
@@ -226,7 +238,11 @@
             <li class="ingridient-item">
               <img
                 class="ingridient-img"
-                src="./images/ingridients/img-4.png"
+                srcset="
+                  ./images/ingridients/img-4_mob@1x.png 1x,
+                  ./images/ingridients/img-4_mob@2x.png 2x
+                "
+                src="./images/ingridients/img-4_mob@1x.png"
                 alt="Semi-sweet chocolate"
                 width="214"
                 height="160"
@@ -236,7 +252,11 @@
             <li class="ingridient-item">
               <img
                 class="ingridient-img"
-                src="./images/ingridients/img-5.png"
+                srcset="
+                  ./images/ingridients/img-5_mob@1x.png 1x,
+                  ./images/ingridients/img-5_mob@2x.png 2x
+                "
+                src="./images/ingridients/img-5_mob@1x.png"
                 alt="Cacao"
                 width="214"
                 height="160"
@@ -246,7 +266,11 @@
             <li class="ingridient-item">
               <img
                 class="ingridient-img"
-                src="./images/ingridients/img-6.png"
+                srcset="
+                  ./images/ingridients/img-6_mob@1x.png 1x,
+                  ./images/ingridients/img-6_mob@2x.png 2x
+                "
+                src="./images/ingridients/img-6_mob@1x.png"
                 alt="Raspberry"
                 width="214"
                 height="160"
@@ -256,7 +280,11 @@
             <li class="ingridient-item">
               <img
                 class="ingridient-img"
-                src="./images/ingridients/img-7.png"
+                srcset="
+                  ./images/ingridients/img-7_mob@1x.png 1x,
+                  ./images/ingridients/img-7_mob@2x.png 2x
+                "
+                src="./images/ingridients/img-7_mob@1x.png"
                 alt="Coconut oil"
                 width="214"
                 height="160"
@@ -268,19 +296,45 @@
       </section>
       <!-- Made section -->
       <section class="section made" id="made">
-        <div class="container">
+        <div class="container made-container">
           <h2 class="made-title section-title">
             How it’s <span class="text-accent">made</span>?
           </h2>
           <div class="made-wrapper">
             <div class="made-left-side">
-              <img
-                class="made-ill"
-                src="./images/made/image.jpg"
-                alt="How it’s made?"
-                width="600"
-                height="400"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1168px)"
+                  srcset="
+                    ./images/made/image_desk@1x.jpg 1x,
+                    ./images/made/image_desk@2x.jpg 2x
+                  "
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/made/image_tab@1x.jpg 1x,
+                    ./images/made/image_tab@2x.jpg 2x
+                  "
+                />
+                <!-- Mobile -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/made/image_mob@1x.jpg 1x,
+                    ./images/made/image_mob@2x.jpg 2x
+                  "
+                />
+                <img
+                  class="made-ill"
+                  src="./images/made/image_mob@1x.jpg"
+                  alt="How it’s made?"
+                  width=""
+                  height=""
+                />
+              </picture>
               <button class="made-btn" type="button">
                 <svg class="made-btn-icon" width="44" height="44">
                   <use href="./images/icons.svg#play"></use>
@@ -318,7 +372,7 @@
         </div>
       </section>
       <!-- Products section -->
-      <section class="section products">
+      <section class="section products hide">
         <div class="container">
           <h2 class="products-title section-title">
             Our <span class="text-accent">products</span>
@@ -472,7 +526,7 @@
         </div>
       </section>
       <!-- Bestsellers section -->
-      <section class="section bestsellers">
+      <section class="section bestsellers hide">
         <div class="container">
           <h2 class="bestsellers-title section-title">
             <span class="text-accent">Top</span> sellers
@@ -536,7 +590,7 @@
         </div>
       </section>
       <!-- Reviews section -->
-      <section class="section reviews" id="reviews">
+      <section class="section reviews hide" id="reviews">
         <div class="container">
           <h2 class="reviews-title section-title">
             <span class="text-accent">Chocolate</span> is loved
@@ -598,7 +652,7 @@
       </section>
     </main>
     <!-- Footer section -->
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container">
         <div class="footer-top">
           <p class="footer-slogan">
@@ -686,7 +740,7 @@
     </footer>
 
     <!-- Modal window -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop hide" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-btn-icon" width="28" height="28">
@@ -805,7 +859,7 @@
     </div>
 
     <!-- Mobile menu -->
-    <div class="mobile-menu" data-menu>
+    <div class="mobile-menu hide" data-menu>
       <button class="mobile-menu-btn" type="button" data-menu-close>
         <svg
           xmlns="http://www.w3.org/2000/svg"
