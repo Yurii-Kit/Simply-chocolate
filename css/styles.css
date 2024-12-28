@@ -513,17 +513,19 @@ button {
     justify-content: start;
   }
 }
-/* @media only screen and (min-width: 1168px) {
-  .ingridient-list {
-    justify-content: start;
-  }
-} */
+
 .ingridient-item {
-  width: 335px;
+  position: relative;
+  /* width: 335px; */
   padding: 32px 28px;
 
   border-radius: 15px;
   border: 1px solid transparent;
+}
+@media only screen and (min-width: 375px) {
+  .ingridient-item {
+    width: 335px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .ingridient-item {
@@ -551,6 +553,23 @@ button {
 .ingridient-img {
   margin: 0 auto;
 }
+.ingridient-wrapper-icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingridient-icon {
+  stroke: #fafafa;
+  fill: transparent;
+}
+.ingridient-item:nth-child(2n) .ingridient-icon {
+  stroke: #fd9222;
+}
+
 .ingridient-caption {
   margin-top: 36px;
   font-size: 14px;
@@ -580,21 +599,11 @@ button {
 
 .made-left-side {
   position: relative;
-  width: 335px;
+
   border-radius: 15px;
   overflow: hidden;
 }
-@media only screen and (min-width: 768px) {
-  .made-left-side {
-    width: 614px;
-  }
-}
 
-@media only screen and (min-width: 1168px) {
-  .made-left-side {
-    width: 600px;
-  }
-}
 .made-btn {
   position: absolute;
   left: calc(50% - 22px);
@@ -610,8 +619,20 @@ button {
 }
 .made-btn-icon {
 }
+@media only screen and (min-width: 768px) {
+  .made-ill {
+    width: 614px;
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .made-ill {
+    width: 600px;
+  }
+}
+
 .made-right-side {
-  width: 335px;
+  max-width: 335px;
   padding: 20px 14px;
   border-radius: 15px;
   background: #fff;
@@ -620,17 +641,17 @@ button {
 
 @media only screen and (min-width: 768px) {
   .made-right-side {
-    width: 614px;
+    max-width: 614px;
   }
 }
 
 @media only screen and (min-width: 1168px) {
   .made-right-side {
-    width: 516px;
+    max-width: 516px;
   }
 }
 .made-subtitle {
-  width: 307px;
+  max-width: 307px;
   margin-bottom: 20px;
 }
 @media only screen and (min-width: 1168px) {
@@ -746,11 +767,34 @@ button {
 }
 .bestsellers-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 .bestsellers-item {
-  width: calc((100% - 16px * 2) / 3);
+  width: 100%;
 }
+@media only screen and (max-width: 767px) {
+  .bestsellers-item:nth-child(n + 2) {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .bestsellers-item {
+    width: calc((100% - 16px) / 2);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1167px) {
+  .bestsellers-item:nth-child(n + 3) {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .bestsellers-item {
+    width: calc((100% - 16px * 2) / 3);
+  }
+}
+
 .bestsellers-wrapper {
   position: relative;
   overflow: hidden;
@@ -807,25 +851,74 @@ button {
 
 /* #region Reviews */
 .reviews {
-  padding-bottom: 120px;
+  padding-bottom: 80px;
+}
+@media only screen and (min-width: 768px) {
+  .reviews {
+    padding-bottom: 100px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .reviews {
+    padding-bottom: 120px;
+  }
 }
 .reviews-title {
-  margin-bottom: 91px;
+  margin-bottom: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .reviews-title {
+    margin-bottom: 90px;
+  }
 }
 .reviews-list {
   display: flex;
   gap: 28px;
   margin-bottom: 50px;
 }
+@media only screen and (min-width: 768px) {
+  .reviews-list {
+    gap: 16px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .reviews-list {
+    gap: 28px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .reviews-item:nth-child(n + 2) {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1167px) {
+  .reviews-item:nth-child(n + 3) {
+    display: none;
+  }
+}
 .reviews-item {
   position: relative;
-  width: calc((100% - 28px * 2) / 3);
-  padding: 56px 24px 24px;
+  width: 100%;
+  padding: 56px 18px 42px;
   background: #fff;
   border-radius: 15px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   box-shadow: 0px 10px 100px 0px rgba(17, 17, 17, 0.03);
 }
+@media only screen and (min-width: 768px) {
+  .reviews-item {
+    width: calc((100% - 16px) / 2);
+    padding: 56px 16px 26px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .reviews-item {
+    width: calc((100% - 28px * 2) / 3);
+    padding: 56px 24px 24px;
+  }
+}
+
 .reviews-avatar {
   position: absolute;
   top: 0;
@@ -853,28 +946,64 @@ button {
 /* #endregion */
 
 /* #region Footer */
+
 .footer {
-  padding: 50px 0;
+  padding: 32px 0;
   background: #1e1823;
 }
+
+@media only screen and (min-width: 1168px) {
+  .footer {
+    padding: 50px 0;
+  }
+}
+
 .footer-top {
   display: flex;
-  padding-bottom: 50px;
+  flex-direction: column;
+  gap: 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+@media only screen and (min-width: 768px) {
+  .footer-top {
+    flex-direction: row;
+    gap: 0px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
 .footer-wrapper {
-  margin-right: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-wrapper {
+    margin-right: 40px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .footer-wrapper {
+    margin-right: 50px;
+  }
 }
 .footer-slogan {
   max-width: 300px;
   margin-right: auto;
 
   color: #fff;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 1.21;
+
+  line-height: 1.17;
   letter-spacing: -0.02em;
 }
+@media only screen and (min-width: 768px) {
+  .footer-slogan {
+    font-size: 28px;
+
+    line-height: 1.21;
+  }
+}
+
 .footer-slogan-accent {
   color: #fd9222;
 }
@@ -895,6 +1024,12 @@ button {
   border-color: rgba(253, 146, 34, 0.1);
 }
 .footer-contacts {
+  margin-bottom: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-contacts {
+    margin-bottom: 0;
+  }
 }
 .footer-contacts-list {
 }
@@ -916,17 +1051,50 @@ button {
   color: #fd9222;
 }
 .footer-bottom {
-  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  padding-top: 32px;
 }
+@media only screen and (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    padding-top: 24px;
+    column-gap: 0;
+  }
+}
+@media only screen and (min-width: 1168px) {
+   {
+  }
+}
+
 .footer-nav {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 18px;
 }
+
+@media only screen and (min-width: 768px) {
+  .footer-nav {
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .footer-nav {
+    gap: 24px;
+  }
+}
+
 .footer-nav-item {
 }
 .footer-nav-link {
   display: block;
-  padding: 18px 0;
+
   color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -935,10 +1103,77 @@ button {
   transition: 300ms ease-in;
   transition-property: color;
 }
+@media only screen and (min-width: 1168px) {
+  .footer-nav-link {
+    padding: 18px 0;
+  }
+}
+
 .footer-nav-link:hover,
 .footer-nav-link:focus {
   color: #fd9222;
 }
+.footer-form {
+  display: flex;
+}
+.footer-input {
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 14px 18px;
+  min-width: 207px;
+  min-height: 45px;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  margin-right: 8px;
+
+  font-weight: 400;
+  font-size: 14px;
+}
+.footer-input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-input {
+    width: 232px;
+    padding: 14px 24px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .footer-input {
+    width: 313px;
+    height: 52px;
+  }
+}
+.footer-btn {
+  padding: 14px 26px;
+  min-width: 120px;
+  min-height: 45px;
+  background: #fd9222;
+
+  line-height: 1.29;
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (min-width: 768px) {
+  .footer-btn {
+    width: 128px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .footer-btn {
+    width: 137px;
+    height: 52px;
+    padding: 17px 33px;
+  }
+}
+
 /* #endregion */
 
 /* #region Modal */
