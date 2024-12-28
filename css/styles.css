@@ -1064,10 +1064,6 @@ button {
     column-gap: 0;
   }
 }
-@media only screen and (min-width: 1168px) {
-   {
-  }
-}
 
 .footer-nav {
   display: flex;
@@ -1120,20 +1116,16 @@ button {
   border: 1.5px solid rgba(255, 255, 255, 0.15);
   border-radius: 30px;
   padding: 14px 18px;
-  min-width: 207px;
-  min-height: 45px;
+  min-width: 152px;
+  height: 45px;
   letter-spacing: -0.02em;
   color: rgba(255, 255, 255, 0.3);
   background-color: transparent;
   margin-right: 8px;
 
-  font-weight: 400;
   font-size: 14px;
 }
-.footer-input::placeholder {
-  font-weight: 400;
-  font-size: 14px;
-}
+
 @media only screen and (min-width: 768px) {
   .footer-input {
     width: 232px;
@@ -1144,12 +1136,14 @@ button {
   .footer-input {
     width: 313px;
     height: 52px;
+    font-size: 18px;
+    line-height: 1.22;
   }
 }
 .footer-btn {
   padding: 14px 26px;
-  min-width: 120px;
-  min-height: 45px;
+  width: 120px;
+  height: 45px;
   background: #fd9222;
 
   line-height: 1.29;
@@ -1158,8 +1152,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media only screen and (min-width: 768px) {
   .footer-btn {
@@ -1172,6 +1164,11 @@ button {
     height: 52px;
     padding: 17px 33px;
   }
+}
+.footer-btn:hover,
+.footer-btn:focus {
+  color: #fd9222;
+  background-color: #fcf1e0;
 }
 
 /* #endregion */
